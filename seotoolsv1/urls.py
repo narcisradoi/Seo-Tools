@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from kdchecker import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('kwdc/', include('kdchecker.urls')),
+    path('', include('kdchecker.urls')),
+    path('process/', views.process, name="process"),
 ]
