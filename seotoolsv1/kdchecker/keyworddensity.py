@@ -1,7 +1,7 @@
 
 import re 
 
-filename = "newfile.txt"
+filename = "kdchecker/newfile.txt"
 
 with open(filename) as f:
     text = f.read()
