@@ -4,7 +4,11 @@ from . import keyworddensity
 
 # Create your views here.
 
-import datetime
-
 def index(request):
-    return HttpResponse("Keyword percentage is: " + keyworddensity.perc + "%")
+    return render(request, 'kdchecker/index.html')
+
+def process(request):
+    if request.method == 'POST':
+        text = request.POST['txtField']
+        print(text)
+    return HttpResponse(text)
